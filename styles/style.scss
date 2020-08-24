@@ -1,0 +1,374 @@
+$fs: 16px;
+$light-grey: #999999;
+$ta: center;
+
+@mixin transform($value) {
+    transform: translateY($value);
+}
+
+%standart-flex {
+    display: flex;
+    justify-content: space-between;
+}
+
+%middle-fw {
+    font-weight: 500;
+}
+
+@import 'reset';
+
+// Task1 (burger menu)  START
+#check_menu {
+    display: none;
+}
+
+.burger-menu {
+    position: relative;
+    width: 100%;
+}
+
+.logo-box {
+    width: 100%;
+    height: 100%;
+    background-color: #ECEFF1;
+    position: relative;
+    padding: 20px 60px;
+
+    .logo {
+        font-size: 20px;
+        font-weight: 600;
+        color: #e63c16;
+    }
+}
+
+.menu__box {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 20px;
+    right: 60px;
+}
+
+.menu__item {
+    display: block;
+    padding: 5px 20px;
+    color: #333;
+    font-size: $fs;
+    @extend %middle-fw;
+    transition-duration: .25s;
+}
+
+.last {
+    padding-right: 0;
+}
+
+// Task1 (burger menu) END
+
+//Task 2a (animation) START
+.box {
+    border: 1px solid orange;
+    height: 360px;
+    width: 360px;
+    position: relative;
+    overflow: hidden;
+    margin: 30px auto;
+
+    &.wide {
+        width: 720px;
+    }
+}
+
+#anim {
+    text-align: $ta;
+    padding-top: 150px;
+
+    ul {
+        text-align: $ta;
+        list-style: none;
+    }
+
+    li {
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        background-color: red;
+        display: inline-block;
+        margin: 0 5px;
+        @include transform(-30px);
+        animation: bounce-balls 1.2s cubic-bezier(0.245, 0.325, 0.510, 1.305) infinite alternate;
+
+        &:nth-child(1) {
+            background: orange;
+            animation-delay: .6s;
+        }
+
+        &:nth-child(2) {
+            background: coral;
+            animation-delay: .7s;
+        }
+
+        &:nth-child(3) {
+            background: darksalmon;
+            animation-delay: .8s;
+        }
+
+        &:nth-child(4) {
+            background: indianred;
+            animation-delay: .6s;
+        }
+
+        &:nth-child(5) {
+            background: lightcoral;
+            animation-delay: .6s;
+        }
+
+        &:nth-child(6) {
+            background: lightcoral;
+            animation-delay: .7s;
+        }
+    }
+}
+
+@keyframes bounce-balls {
+    30% {
+        @include transform(-30px);
+    }
+
+    60% {
+        @include transform(205px);
+    }
+
+    80% {
+        @include transform(190px);
+    }
+
+    100% {
+        @include transform(195px);
+    }
+}
+
+// Task 2a (animation) END
+
+//  Task 2b (flex) START
+.wrapper {
+    @extend %standart-flex;
+    margin: 20px 0;
+    border: 2px solid #eee;
+    border-radius: 10px;
+    padding: 10px;
+
+    .block {
+        padding-right: 4%;
+
+        &:last-child {
+            padding-right: 0;
+        }
+    }
+}
+
+//  Task 2b (flex) END
+
+// Task 2c (form) START
+.contact {
+    padding: 40px 0;
+
+    .contact_title h3 {
+        margin-bottom: 20px;
+        text-align: $ta;
+        font-size: $fs*2;
+        color: rgba(0, 0, 18, 0.9);
+        @extend %middle-fw;
+    }
+
+    .contact-content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 5%;
+
+        .contact-form-main {
+            position: relative;
+            width: 100%;
+        }
+
+        .name,
+        .email {
+            width: 47%;
+            padding: 10px;
+            border: none;
+            border-bottom: 2px solid #000;
+            margin-bottom: 4%;
+        }
+
+        .name {
+            margin-right: 5%;
+        }
+
+        .message {
+            width: 100%;
+            padding: 10px;
+            padding-bottom: 110px;
+            border: none;
+            border-bottom: 2px solid #000;
+            margin-bottom: 10px;
+        }
+    }
+
+    .center-button {
+        margin: 70px 0;
+        text-align: $ta;
+
+        a {
+            font-size: 15px;
+            background: #000;
+            color: rgba(255, 255, 255, 0.9);
+            padding: 17px 23px;
+        }
+    }
+}
+
+
+// Task 2c (form) END
+
+// Task 2d (anothers section) START
+.says {
+    background-image: url(../images/says.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 645px;
+    box-shadow: inset 0px 0px 7px 325px rgba(0, 0, 0, 0.5);
+    color: rgba(255, 255, 255, 0.9);
+
+    .says-content {
+        padding: 100px 0;
+
+        .says-photo-face img {
+            border-radius: 50%;
+        }
+
+        .says-title h4 {
+            font-size: 34px;
+            @extend %middle-fw;
+            margin: 12px 0;
+        }
+
+        .says-subtitle span {
+            font-size: 20px;
+            font-weight: 600;
+        }
+
+        .says-text p {
+            margin-top: 20px;
+            font-size: 18px;
+            @extend %middle-fw;
+            letter-spacing: 1.3px;
+            line-height: 1.5;
+        }
+    }
+}
+
+.standart_stat {
+    @extend %standart-flex;
+    margin: 70px 0;
+
+    .stat_block {
+        width: 120px;
+        padding: 7px;
+        border-radius: 8%;
+
+        .stat_num {
+            @extend %standart-flex;
+
+            span {
+                font-size: 34px;
+                line-height: 45px;
+                color: #000000;
+            }
+
+            .stat_icon i {
+                color: #4985FF;
+                font-size: 30px;
+                line-height: 33px;
+            }
+        }
+
+        .stat_info p {
+            text-align: $ta;
+            margin-top: 8px;
+            font-size: $fs;
+            line-height: 25px;
+            color: $light-grey;
+        }
+
+    }
+}
+
+// Task 2d (anothers section) END
+
+//Task 3 (footer) START
+
+.footer {
+    background: #F6F6F8;
+    width: 100%;
+
+    .footer_wrapper {
+        @extend %standart-flex;
+        padding: 70px 0;
+
+
+        .footer_block {
+            padding-right: 30px;
+
+            .f_block_title h4 {
+                font-style: normal;
+                font-weight: 600;
+                font-size: 18px;
+                line-height: 22px;
+                color: #000;
+                margin-bottom: 33px;
+            }
+
+            .f_list_item {
+                padding-bottom: 22px;
+
+                &:last-child {
+                    padding-bottom: 0px;
+                }
+
+                a,
+                i {
+                    font-style: normal;
+                    font-weight: normal;
+                    font-size: 14px;
+                    line-height: 22px;
+                    color: $light-grey;
+                }
+
+                i {
+                    padding-right: 10px;
+                }
+            }
+        }
+    }
+
+    .f_border {
+        border-top: 1px solid #E0E0E0;
+        padding-bottom: 30px;
+    }
+
+    .f_info p {
+        padding-bottom: 30px;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 15px;
+        line-height: 21px;
+        text-align: $ta;
+        color: $light-grey;
+    }
+}
+
+//Task 3 (footer) END
+@import 'pseudo-classes';
+@import 'media';

@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Landing</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/font-awesome.min.css">
+    <link
+        href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i,900,900i&display=swap&subset=cyrillic"
+        rel="stylesheet" />
+</head>
+
+<body>
+    <!-- Task1 (burger menu)  START-->
+    <header class="burger-menu">
+        <input id="check_menu" type="checkbox" />
+        <label class="menu__btn" for="check_menu">
+            <span></span>
+        </label>
+        <div class="logo-box">
+            <a href="#" class="logo">Logo</a>
+        </div>
+        <ul class="menu__box">
+            <li><a class="menu__item" href="index.html">Home</a></li>
+            <li><a class="menu__item" href="#">Animation</a></li>
+            <li><a class="menu__item" href="#">Team</a></li>
+            <li><a class="menu__item" href="#">Blog</a></li>
+            <li><a class="menu__item last" href="#">Contact</a></li>
+        </ul>
+    </header>
+    <!-- Task1 (burger menu)  END-->
+
+    <!-- Task 2a (animation) START-->
+    <!-- circles fall -->
+    <section id="animation">
+        <h2 class="center" style="margin-top: 20px;">Animation:</h2>
+        <div class="container">
+            <div class="box">
+                <div id="anim">
+                    <ul>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Task 2a (animation) END-->
+
+    <!-- Task 2b (flex) START-->
+    <section id="photos">
+        <h2 style="text-align: center; margin-top: 12px;">Pictures:</h2>
+        <div class="container">
+            <div class="wrapper">
+                <div class="block">
+                    <img src="images/photo1.jpg" alt="photo1" width="100%" height="100%">
+                </div>
+                <div class="block">
+                    <img src="images/photo2.jpg" alt="photo2" width="100%" height="100%">
+                </div>
+                <div class="block">
+                    <img src="images/photo4.jpg" alt="photo3" width="100%" height="100%">
+                </div>
+                <div class="block">
+                    <img src="images/photo3.jpg" class="last_img" alt="photo4" width="100%" height="100%">
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Task 2b (flex) END-->
+
+    <!-- Task 2c (form) START-->
+
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="contact_title center">
+                <h3>GET IN TOUCH</h3>
+            </div>
+            <div class="contact-content">
+                <div class="contact-form-main">
+                    <form action="" class="form">
+                        <input type="name" placeholder="Name" / class="name">
+                        <input type="email" placeholder="Email" / class="email">
+                    </form>
+
+                    <form action="" class="form">
+                        <input type="text" placeholder="How can we help you?" class="message" />
+                    </form>
+                </div>
+            </div>
+            <div class="center-button">
+                <a href="#">SEND MESSAGE</a>
+            </div>
+        </div>
+    </section>
+    <!-- Task 2c (form) END-->
+
+    <!-- Task 2d (anothers section) START-->
+    <section id="another">
+        <div class="says">
+            <div class="container">
+                <div class="says-content center">
+                    <div class="says-photo-face">
+                        <img src="images/says-face.jpg" alt="" />
+                    </div>
+                    <div class="says-title">
+                        <h4>Mr John Doe</h4>
+                    </div>
+                    <div class="says-subtitle">
+                        <span> Creative Director</span>
+                    </div>
+                    <div class="says-text">
+                        <p>
+                            Dolor facilis veritatis doloremque dicta eos Voluptate earum nulla
+                            ad et esse Saepeasperiores nisi facere ipsam
+                            corporis. Dolorem praesentium tenetur tempore dolorem illum autem?
+                            Veritatis fuga quasi sunt tenetur. Expedita id eaque
+                            incidunt beatae nesciunt! In similique exercitationem tempore
+                            excepturi placeat Nostrum ducimus dicta
+                            temporibus quas!
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="standart_stat">
+                <div class="stat_block">
+                    <div class="stat_num">
+                        <div class="stat_icon">
+                            <i class="fa fa-sign-language" aria-hidden="true"></i>
+                        </div>
+                        <span>325</span>
+                    </div>
+                    <div class="stat_info">
+                        <p>Our projects</p>
+                    </div>
+                </div>
+                <div class="stat_block">
+                    <div class="stat_num">
+                        <div class="stat_icon">
+                            <i class="fa fa-graduation-cap" aria-hidden="true"></i>
+                        </div>
+                        <span>10</span>
+                    </div>
+                    <div class="stat_info">
+                        <p>Expirience</p>
+                    </div>
+                </div>
+                <div class="stat_block">
+                    <div class="stat_num">
+                        <div class="stat_icon">
+                            <i class="fa fa-users" aria-hidden="true"></i>
+                        </div>
+                        <span>23</span>
+                    </div>
+                    <div class="stat_info">
+                        <p>Team</p>
+                    </div>
+                </div>
+                <div class="stat_block">
+                    <div class="stat_num">
+                        <div class="stat_icon">
+                            <i class="fa fa-rocket" aria-hidden="true"></i>
+                        </div>
+                        <span>12/7</span>
+                    </div>
+                    <div class="stat_info">
+                        <p>Fast Time</p>
+                    </div>
+                </div>
+                <div class="stat_block">
+                    <div class="stat_num">
+                        <div class="stat_icon">
+                            <i class="fa fa-male" aria-hidden="true"></i>
+                        </div>
+                        <span>~250</span>
+                    </div>
+                    <div class="stat_info">
+                        <p>Clients</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Task 2d (anothers section) END-->
+
+    <!-- Task 3 (footer) START -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer_wrapper">
+                <div class="footer_block">
+                    <div class="f_block_title">
+                        <h4>
+                            Contact information</h4>
+                    </div>
+                    <ul class="f_list">
+                        <li class="f_list_item"><i class="fa fa-envelope-o" aria-hidden="true"></i><a
+                                href="#">test@test.com</a></li>
+                        <li class="f_list_item"><i class="fa fa-phone" aria-hidden="true"></i><a href="#">+8 777 555 66
+                                99</a></li>
+                        <li class="f_list_item"><i class="fa fa-map-marker" aria-hidden="true"></i><a href="#">Kiev,
+                                Freedom Avenue</a></li>
+                    </ul>
+                </div>
+                <div class="footer_block">
+                    <div class="f_block_title">
+                        <h4>Main links</h4>
+                    </div>
+                    <ul class="f_list">
+                        <li class="f_list_item"><i class="fa fa-angle-right" aria-hidden="true"></i><a
+                                href="index.html">Home</a></li>
+                        <li class="f_list_item"><i class="fa fa-angle-right" aria-hidden="true"></i><a
+                                href="#animation">Animation</a></li>
+                        <li class="f_list_item"><i class="fa fa-angle-right" aria-hidden="true"></i><a
+                                href="#photos">Pictures</a>
+                        </li>
+                        <li class="f_list_item"><i class="fa fa-angle-right" aria-hidden="true"></i><a
+                                href="#another">Team &amp; statistics</a></li>
+                    </ul>
+                </div>
+                <div class="footer_block">
+                    <div class="f_block_title">
+                        <h4>Our projects</h4>
+                    </div>
+                    <ul class="f_list">
+                        <li class="f_list_item"><i class="fa fa-angle-right" aria-hidden="true"></i><a href="#">Dogs
+                                &amp; cats</a></li>
+                        <li class="f_list_item"><i class="fa fa-angle-right" aria-hidden="true"></i><a
+                                href="#">Fireman</a></li>
+                        <li class="f_list_item"><i class="fa fa-angle-right" aria-hidden="true"></i><a
+                                href="#">Wordpress</a></li>
+                        <li class="f_list_item"><i class="fa fa-angle-right" aria-hidden="true"></i><a
+                                href="#">OpenCart</a></li>
+                    </ul>
+                </div>
+                <div class="footer_block">
+                    <div class="f_block_title">
+                        <h4>Social networks</h4>
+                    </div>
+                    <ul class="f_list">
+                        <li class="f_list_item"><i class="fa fa-angle-right" aria-hidden="true"></i><a
+                                href="#">VK.com</a></li>
+                        <li class="f_list_item"><i class="fa fa-angle-right" aria-hidden="true"></i><a
+                                href="#">Instagram</a></li>
+                        <li class="f_list_item"><i class="fa fa-angle-right" aria-hidden="true"></i><a
+                                href="#">Facebook</a></li>
+                        <li class="f_list_item"><i class="fa fa-angle-right" aria-hidden="true"></i><a
+                                href="#">Twitter</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="f_border"></div>
+            <div class="f_info">
+                <p>Ukraine © 2020. All Right Reserved, Made By Sviatoslav.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Task 3 (footer) END -->
+</body>
+
+</html>

@@ -1,0 +1,18 @@
+.center-button a:hover {
+    background: #fff;
+    color: #000;
+    border: 2px solid #000;
+    transition-duration: 0.5s;
+}
+
+.name,
+.email,
+.message:focus {
+    color: rgb(111, 106, 106);
+    transition-duration: 0.5s;
+}
+
+.footer .f_list .f_list_item a:hover {
+    color: orange;
+    transition: .5s;
+}
